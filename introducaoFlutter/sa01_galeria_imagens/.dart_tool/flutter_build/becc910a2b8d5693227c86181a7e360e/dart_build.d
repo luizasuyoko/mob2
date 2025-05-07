@@ -1,0 +1,1 @@
+ C:\\Users\\CastelloB\\Documents\\DiogoAula\\Mobile\\sa01_galeria_imagens\\.dart_tool\\flutter_build\\becc910a2b8d5693227c86181a7e360e\\dart_build_result.json: 

@@ -1,0 +1,2 @@
+C:/Users/CastelloB/Documents/DiogoAula/Mobile/sa01_galeria_imagens/android/app/.cxx/Debug/1k492l11/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/CastelloB/Documents/DiogoAula/Mobile/sa01_galeria_imagens/android/app/.cxx/Debug/1k492l11/x86_64/CMakeFiles/rebuild_cache.dir
