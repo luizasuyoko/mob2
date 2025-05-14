@@ -23,7 +23,7 @@ class _TelaPerfilState extends State<TelaPerfil>{//realiza a construção da tel
   TextEditingController _idadeController = TextEditingController();
 
   String? _nome;
-  double? _idade;
+  Double? _idade;
 
   String? _corSelecionada;
 
