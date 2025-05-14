@@ -1,7 +1,5 @@
-import 'dart:ffi';
-import '../../../../exercicio01_perfil/.dart_tool/package_config_subset';
-import '../../../../exercicio01_perfil/.gitignore';
-import '../../../../exercicio01_perfil/android/app/src/main/AndroidManifest.xml';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main(){ //método principal para rodae a aplicacao
   runApp(MaterialApp( //base d todos os widgets(Elementos visuais)
@@ -26,6 +24,10 @@ class _TelaPerfilState extends State<TelaPerfil>{//realiza a construção da tel
 
   String? _nome;
   double? _idade;
+
+  String? _corSelecionada;
+
+  String? _cor;
 
   Map<String,Color> coresDisponiveis ={
     "Azul": Colors.blue,
@@ -108,11 +110,10 @@ class _TelaPerfilState extends State<TelaPerfil>{//realiza a construção da tel
                 Text("Idade: $_idade"),
               if(_cor != null)
                 Text("Cor: $_cor"),
-              
             )
           ]
         )
       )
-    )
+    );
   }
 }
