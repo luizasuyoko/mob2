@@ -97,7 +97,7 @@ class _NotaViewState extends State<NotaView>{
               conteudo: value
             );
           }
-        )
+        ),
         actions: [
           TextButton(
             onPressed: (){
@@ -109,7 +109,7 @@ class _NotaViewState extends State<NotaView>{
           )
         ]
       )
-    )
+    );
   }
 
   void _deleteNota(int? id) async{
