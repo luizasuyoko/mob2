@@ -6,7 +6,6 @@ import 'package:sa_petshop/views/home_screen.dart';
 class CadastroPetScreen extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _CadastroPetScreenState();
   }
 }
@@ -15,10 +14,11 @@ class _CadastroPetScreenState extends State<CadastroPetScreen>{
   final _formKey = GlobalKey<FormState>();
   final _petsController = PetControlller();
 
-  String _nome = "";
-  String _raca = "";
-  String _nomeDono = ""; 
-  String _telefone = "";
+  //late
+  late String _nome;
+  late String _raca;
+  late String _nomeDono; 
+  late String _telefone;
 
   _salvarPet() async{
     if(_formKey.currentState!.validate()){
@@ -40,5 +40,32 @@ class _CadastroPetScreenState extends State<CadastroPetScreen>{
   //buildar a screen 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Cadastro de Pet"),),
+      body: Padding(padding: EdgeInsets.all(16),
+      child: Form(key: _formKey ,child: ListView(
+        children: [TextFormField(
+          decoration: InputDecoration(labelText: "Nome do Pet"),
+          validator: (value) => value!.isEmpty ? "Campo nao preenchido":null,
+          onSaved: (newValue) => _nome = newValue!,
+        ),
+        TextFormField(
+          decoration: InputDecoration(labelText: "Raça do Pet"),
+          validator: (value) => value!.isEmpty ? "Campo nao preenchido":null,
+          onSaved: (newValue) => _nome = newValue!,
+        ),TextFormField(
+          decoration: InputDecoration(labelText: "Dono do Pet"),
+          validator: (value) => value!.isEmpty ? "Campo nao preenchido": null,
+          onSaved: (newValue) => _nome = newValue!,
+        ),TextFormField(
+          decoration: InputDecoration(labelText: "Telefone"),
+          validator: (value) => value!.isEmpty ? "Campo nao preenchido":null,
+          onSaved: (newValue) => _nome = newValue!,
+        ),
+        ElevatedButton(onPressed: _salvarPet, child: Text("Cadastrar"))
+        ],
+      )),
+      ),
+    );
   }
 }

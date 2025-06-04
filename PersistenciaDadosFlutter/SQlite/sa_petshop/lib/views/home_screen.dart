@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sa_petshop/controllers/pet_controller.dart';
 import 'package:sa_petshop/models/pet_model.dart';
+import 'package:sa_petshop/views/cadastro_pet_screen.dart';
 
 class HomeScreen extends StatefulWidget{
   @override
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen>{
   bool _isLoading = true;
 
   @override
-  void initState() {
+  void initState() { //metodo para rodar antes de qualquer coisa
     super.initState();
     _carregarDados();
   }
@@ -52,6 +53,8 @@ class _HomeScreenState extends State<HomeScreen>{
               return ListTile( //item da lista
                 title: Text("${pet.nome} - ${pet.raca}"),
                 subtitle: Text("${pet.nomeDono} - ${pet.telefone}"),
+                //on tap-> para navegar para os detalhes do pet
+                //onlongpress -> deletar pet
               ); 
             }
           ),

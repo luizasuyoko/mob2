@@ -1,6 +1,6 @@
 class Pet{
   //atributos
-  final int? id; //pode ser nulo
+  final int? id; //pode ser nulo(indicado pelo ?)
   final String nome; 
   final String raca;
   final String nomeDono;
@@ -16,7 +16,7 @@ class Pet{
   }); 
 
   //métodos de conversao de obj para bd
-  //toMap : obg para o bd
+  //toMap : obj para o bd
   Map<String, dynamic> toMap(){
     return{
       "id":id,
@@ -27,7 +27,7 @@ class Pet{
     };
   }
 
-  //fromMap: bf para o obj
+  //fromMap: bd para o obj
   factory Pet.fromMap(Map<String, dynamic> map){
     return Pet(
       id: map["id"] as int, //cast
