@@ -59,6 +59,7 @@ class _ClimaViewState extends State<ClimaView>{
           ] else ...[
             Text("Procure uma cidade")
           ]
+          
         ],
       ),),
     );
