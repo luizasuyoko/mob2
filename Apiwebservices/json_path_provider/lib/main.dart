@@ -10,6 +10,8 @@ void main(){
 }
 
 class ProdutoPage extends StatefulWidget{
+  const ProdutoPage({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _ProdutoPageState();

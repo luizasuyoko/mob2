@@ -10,7 +10,7 @@ import 'package:sa_petshop/views/criar_consulta_screen.dart';
 class DetalhePetScreen extends StatefulWidget{
   final int petId; //receber o id do pet
 
-  DetalhePetScreen({
+  const DetalhePetScreen({
     super.key,
     required this.petId
   }); //pega o Id do pet

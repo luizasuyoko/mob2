@@ -13,14 +13,16 @@ void main(){ //método principal para rodae a aplicacao
   ));
 }
 
-class TelaPerfil extends StatefulWidget{ //tela dinamica
+class TelaPerfil extends StatefulWidget{
+  const TelaPerfil({super.key});
+ //tela dinamica
   @override
   State<TelaPerfil> createState() => _TelaPerfilState(); //chama a mudança
 }
 
 class _TelaPerfilState extends State<TelaPerfil>{//realiza a construção da tela
-  TextEditingController _nomeController = TextEditingController();
-  TextEditingController _idadeController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _idadeController = TextEditingController();
 
   String? _nome;
   Double? _idade;

@@ -9,7 +9,7 @@ import 'package:sa_petshop/views/detalhe_pet_screen.dart';
 class CriarConsultaScreen extends StatefulWidget {
   final int petId; //recebo o id do pet
 
-  CriarConsultaScreen({
+  const CriarConsultaScreen({
     super.key,
     required this.petId
   });

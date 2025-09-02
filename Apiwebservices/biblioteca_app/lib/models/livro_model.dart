@@ -2,7 +2,7 @@ class LivroModel {
   final String? id;
   final String titulo;
   final String autor;
-  final String disponivel;
+  final bool disponivel;
 
   LivroModel({
     this.id,
@@ -22,7 +22,5 @@ class LivroModel {
     id:json["id"].toString(),
     titulo: json["titulo"].toString(), 
     autor: json["autor"].toString(), 
-    disponivel: (json["disponivel"] == true ? true : false).toString()
-  ); //operador ternario para corrigir a booleana
-
+    disponivel: json["disponivel"] == true ? true : false); //operador ternario para corrigir a booleana
 }

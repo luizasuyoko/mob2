@@ -2,11 +2,13 @@
 
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
+
 class ApiServices{
   //atributos e métodos da classe e não do obj
   //base url para conexão api
   //static -> transforma o atributo em atributo da classe não do obj
-  static const String _baseUrl = "http://10.109.197.4";
+  static const String _baseUrl = "http://10.109.197.5:3009";
 
   //métodos 
   //GET (Listar todos os recursos)
@@ -27,7 +29,7 @@ class ApiServices{
 
   //POST(Criar novo recurso)
   static Future<Map<String, dynamic>> post(String path, Map<String,dynamic> body) async{
-    final res = http.post(
+    final res = await http.post(
       //endereço da api
       Uri.parse("$_baseUrl/$path"),
       //headers
@@ -41,7 +43,7 @@ class ApiServices{
 
   //PUT(Atualizar recurso)
   static Future<Map<String, dynamic>> put(String path, Map<String,dynamic> body) async{
-    final res = http.put(
+    final res = await http.put(
       //endereço da api
       Uri.parse("$_baseUrl/$path"),
       //headers
