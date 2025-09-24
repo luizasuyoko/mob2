@@ -77,7 +77,7 @@ classDiagram
 
 ```mermaid
 graph TD
-    subgraph"Acoes"
+    subgraph "Acoes"
     uc1([Registrar-se])
     uc2([Login])
     uc3([Logout])
