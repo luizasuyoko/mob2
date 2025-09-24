@@ -48,8 +48,7 @@ class _LoginViewState extends State<LoginView>{
             ),
             TextField(
               controller: _senhaField,
-              decoration: InputDecoration(
-                labelText: "Senha", 
+              decoration: InputDecoration(labelText: "Senha", 
                 suffixIcon: IconButton(onPressed: (){
                   setState(() {
                     _invisivel = !_invisivel;
