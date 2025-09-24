@@ -40,7 +40,7 @@ Construir um Aplicativo do Zero - O CineFavorite permitirá criar uma conta e bu
         - updateNota()
 
 ```mermaid
-classeDiagram
+classDiagram
     class User{
         +String uid
         +String email
@@ -74,16 +74,17 @@ classeDiagram
         - Salvar Filmes Favoritos
         - Dar Nota aos Filmes
         - Remover Favoritos
+
 ```mermaid
 graph TD
-    subgraph"Ações"
-        uc1([Registrar-se])
-        uc2([Login])
-        uc3([Logout])
-        uc4([Search Movie])
-        uc5([Favorite Movie])
-        uc6([Rating Movie])
-        uc7([Remove Favorite Movie])
+    subgraph"Acoes"
+    uc1([Registrar-se])
+    uc2([Login])
+    uc3([Logout])
+    uc4([Search Movie])
+    uc5([Favorite Movie])
+    uc6([Rating Movie])
+    uc7([Remove Favorite Movie])
     end
 
     user([Usuario])
@@ -108,7 +109,7 @@ graph TD
     - Ação de Login
 
 ```mermaid
-graphTD
+graph TD
 
     A[Início] --> B{Login Usuário}
     B --> C[Inserir Email e Senha]
