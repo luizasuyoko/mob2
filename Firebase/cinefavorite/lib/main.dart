@@ -1,6 +1,12 @@
+import 'package:cinefavorite/firebase_options.dart';
+import 'package:cinefavorite/views/auth_widget.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() async{
-  runApp(MaterialApp(home: ,))
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
+  runApp(MaterialApp(home: AuthWidget(),));
 }
