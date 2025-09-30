@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class TmdbService {
   //colocar dados da api
-  static const String _apiKey = "";
+  static const String _apiKey = "1fa5c2d59029fd1c438cc35713720604";
   static const String _baseUrl = "https://api.themoviedb.org/3";
   static const String _idioma = "pt-BR";
   //static -> atributos é da classe e não do obj
@@ -17,7 +17,7 @@ class TmdbService {
   //buscar filme na api pelo tema
   static Future<List<Map<String, dynamic>>> searchMovie(String termo)async {
     //converter string em url
-    final apiURI = Uri.parse("$_baseUrl/search/movie?api_key=$_apiKey&query=$termo&language=$_idioma");
+    final apiURI = Uri.parse('$_baseUrl/search/movie?api_key=$_apiKey&query=$termo&language=$_idioma');
     //http request - get
     final response = await http.get(apiURI);
 

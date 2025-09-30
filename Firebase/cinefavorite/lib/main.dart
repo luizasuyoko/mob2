@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() async{
+void main() async{ //na main é estabelecida  uma conexão com o firebase
   //garantir o carregamento dos widgets
   WidgetsFlutterBinding.ensureInitialized();
   //conectar com o firebase
@@ -13,10 +13,9 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform
   );
   runApp(MaterialApp(
-    title: "Cine Favorites",
+    title: "Cine Favorite",
     theme: ThemeData(
       primarySwatch: Colors.lightGreen,
-      brightness: Brightness.dark
     ),
     home: AuthStream(), //permite a navegação de tela de acordo com algum decisão
   ));
@@ -28,13 +27,13 @@ class AuthStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>( //permitir retorno null para usuário?
-      //ouvinte da mudança de status do usuário
+      //listener = ouvinte da mudança de status do usuário
       stream: FirebaseAuth.instance.authStateChanges(),
       //identifica a mudança de status de usuario (logado ou não)
       builder: (context, snapshot){ //analisa a instantânea da aplicação
         //se tiver logado vai para a tela de favoritos
         if(snapshot.hasData){
-          return FavoritosView();
+          return FavoriteView();
         } //caso contrario => tela de login
         return LoginView();
       },
