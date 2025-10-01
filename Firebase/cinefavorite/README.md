@@ -121,6 +121,6 @@ graph TD
 ```
 
 ## Prototipagem 
-- ## Figma: https://www.figma.com/design/BgsFnLpOhTrXJ8KwGPnVy3/Untitled?node-id=0-1&t=oQZ94vyCK3mTyhVS-1
+- ## Figma: https://www.figma.com/design/RaVrlpiggF1y6KsHnla12U/Untitled?t=BT6b5NIQQkaFseV9-1
 
 ## Codificação
