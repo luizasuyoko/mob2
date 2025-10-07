@@ -1,4 +1,4 @@
-name: exemplo_geo_locator
+name: sa_geolocator_maps
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -10,7 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   geolocator: ^14.0.2
-  http: ^1.5.0
+  intl: ^0.20.2
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:
