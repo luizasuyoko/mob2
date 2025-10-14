@@ -1,10 +1,10 @@
-class LocationPoint {
+class LocationPoints {
   //atributos
   final double latitude;
   final double longitude;
   final String dataHora;
 
-  LocationPoint({
+  LocationPoints({
     required this.latitude,
     required this.longitude,
     required this.dataHora
